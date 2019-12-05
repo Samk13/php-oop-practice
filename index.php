@@ -35,28 +35,40 @@ class User {
 
 }
 
+class AdminUser extends User {
+
+    public  $level;
+
+    public function __construct($userName,$email,$level){
+        $this->level = $level;
+        parent::__construct($userName,$email);
+    }
+
+
+}
+
 
 $user1 = new User('Sam','sam@gmail.com');
 $user2 = new User('Linnea','linnea@gmail.com');
+$user3 = new AdminUser('admin','admin@gmail.com',5);
 
 echo $user1->getUser() . '<br>';
 
 //set email 
-$user1->setEmail('samdf@gmail.com') . '<br>';
+$user3->setEmail('adminadmin@gmail.com') . '<br>';
 //show email
 echo $user1->getEmail() . '<br>';
+echo $user3->getUser() . '<br>';
+echo $user3->getEmail() . '<br>';
+echo $user3->level . '<br>';
+
+
+
+
+
+
+
+
+
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>php OOP</title>
-</head>
-<body>
-    
-</body>
-</html>
