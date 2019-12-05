@@ -40,6 +40,10 @@ $user1 = new User('Sam','sam@gmail.com');
 $user2 = new User('Linnea','linnea@gmail.com');
 
 echo $user1->getUser() . '<br>';
+
+//set email 
+$user1->setEmail('samdf@gmail.com') . '<br>';
+//show email
 echo $user1->getEmail() . '<br>';
 
 ?>
