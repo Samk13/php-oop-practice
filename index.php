@@ -11,43 +11,29 @@ echo <<<EOH
   
 EOH;
 
-class User {
-    public $userName;
-    public $email;
-    public $role;
+class Weather {
+    public static $tempConditions = ['cold','mild','warm'];
 
-    public function __construct($userName , $email){
-        $this->userName = $userName;
-        $this->email = $email;
+    public static function celsiusToFareneit($c){
+        $cf= $c * 9 / 5 +32;
+        return "$c C converted to F ===> $cf F";
     }
-    public function __destruct(){
-        echo "the user: $this->userName  is DELETED!";
-    }
+    public static function determineTempCondition($f){
+        if ($f < 40 ){
+            return " \n\t ====> today the wheather is " . self :: $tempConditions[0] . "❌";
 
-    public function addFriend(){
-        return "$this->userName added as a freind";
-    }
-    public function message(){
-      return "$this->email set a new message";
-    }
-
-    //getter
-    public function getName(){
-        return $this->userName;
-    }
-    //setter 
-    public function setName($input){
-        return $this->UserName = $input;
+        } elseif($f < 70){
+            return self :: $tempConditions[1];
+        }else{
+            return self :: $tempConditions[2];
+        }
     }
 }
 
+print_r( Weather :: $tempConditions);
 
- $user1 = new User('Sam',"sam@gmail.com");
+echo Weather :: celsiusToFareneit(20);
 
- var_dump($user1);
- echo $user1->userName;
-
-
-
+echo Weather :: determineTempCondition(10);
 
 ?>
