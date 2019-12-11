@@ -1,0 +1,47 @@
+body{
+  background: #313131;
+  font-family: verdana;
+}
+.new-user{
+  background: rgb(59, 59, 59);
+  padding: 20px 40px;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 3px 17px -1px rgba(0,0,0,0.75);
+}
+h2{
+  color: coral;
+}
+label,input{
+  display: block;
+  margin: 18px 0;
+}
+label{
+  color: #777;
+}
+input[type='text'],
+input[type='email']{
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+input:focus { 
+  border: coral;
+  box-shadow: 0px 3px 17px -1px coral;
+
+}
+input[type='submit']{
+  margin: 24px auto;
+  font-size: 18px;
+  background: coral;
+  color: #fff;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 10px;
+}
+.error{
+  color: coral;
+  font-size: 14px;
+}
