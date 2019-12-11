@@ -22,7 +22,7 @@
 <body>
   
   <div class="new-user">
-    <h2>Create a new user</h2>
+    <h2>Create a new user</h2>  
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
 
       <label>username: </label>
